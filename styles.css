@@ -1,0 +1,265 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+    /* global 94%+ browsers support */
+    background: linear-gradient(33deg, rgba(34, 102, 171, 0.98) 6%, rgba(161, 47, 161, 1) 86%);
+}
+
+.container{
+    width: 90%;
+    max-width: 450px;
+}
+
+h1{
+
+    color: rgb(252, 247, 247);
+    opacity: 0.75;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.displayContainer{
+    
+    position: relative;
+    /* Basic linear gradient */
+    background: radial-gradient(circle at 52.1% -29.6%, rgb(144, 17, 105) 0%, rgb(51, 0, 131) 100.2%);
+
+    border-radius: 1rem;
+    border-bottom: 0.35 solid rgb(112, 18, 112);
+    margin: 1rem 0;
+    padding: 1.5rem;
+    
+    
+
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    /* gap: 8px; */
+}
+    
+.display{
+    width: 100%;
+    padding: 1.15rem 1rem;
+    color: yellow;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+    background-color: transparent;
+    border: none;
+}
+.display::placeholder{
+
+    position: absolute;
+    top: 38%;
+    left: 1rem;
+    font-size: 1.5rem;
+    line-height: 30px;
+    color: rgb(232, 232, 29);
+    opacity: 0.65;
+    text-transform: uppercase;
+}
+
+.displayContainer button{
+
+    /* position: relative; */
+    top: 50%;
+}
+
+.inputContainer{
+
+    background: radial-gradient(circle at 52.1% -29.6%, rgb(144, 17, 105) 0%, rgb(51, 0, 131) 100.2%);
+    width: 100%;
+    padding: 2rem;
+    padding: 2rem;
+    border-bottom: 5px solid rgb(88, 4, 88);
+    border-radius: 1rem;
+}
+
+.lengthContainer{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lengthContainer p:nth-child(1){
+
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.lengthContainer p:nth-child(2){
+
+    color: yellow;
+    font-size: 1.5rem;
+    
+}
+
+.strengthContainer{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+.strengthContainer p{
+
+    color: white;
+    font-size: 1.5rem;
+}
+
+.indicator{
+
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+
+.generateButton{
+
+    width: 100%;
+    padding: 1rem 0;
+    background: radial-gradient(circle at 52.1% -29.6%, rgb(144, 17, 105) 0%, rgb(51, 0, 131) 100.2%);
+    text-align: center;
+    border-radius: 0.75rem;
+    border-bottom: 0.35 rem solid yellow;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: yellowgreen;
+    font-weight: 600;
+    font-size: 1.25rem;
+    
+}
+
+ /* one of the hard things is styling checkboxes  */
+
+.check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+}
+
+.check input{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid cyan;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+}
+
+.check input:checked{
+
+    background-color: aquamarine;
+}
+
+.check input:checked::before{
+
+    content: 'T';
+    position: absolute;
+    color: black;
+    font-size: 1.05rem;
+    font-weight: 600;
+    left: 20%;
+    transform: translateY(10%);
+}
+
+.check label{
+    color: white;
+    font-size: 1.25rem;
+    
+}
+
+/*most toughest job is slider*/
+.slider{
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 1.5rem;
+    /* background-color: rgb(199, 184, 184); */
+    background-image: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    background-color: violet;
+    
+
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    outline: none;
+   
+}
+
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: 2.5px;
+    background-color: blanchedalmond;
+    transform: translateY(-8%);
+    box-shadow: 0px 0px 20px 0px rgb(207, 131, 18);
+    transition: all 100ms ease-in;
+
+}
+
+.slider:focus{
+    outline: 3px solid yellow;
+}
+
+.slider::-webkit-slider-thumb:hover{
+    outline: 2px solid rgb(238, 146, 8);
+    background-color: aqua;
+    box-shadow: 0px 0px 25px 5px rgb(14, 186, 8);
+}
+
+.cpyBtn{
+    background: transparent;
+    border: none;
+}
+
+.toolTip{
+
+    position: absolute;
+    background-color: white;
+    color: rgb(255, 30, 0);
+    font-size: 1.25rem;
+    
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+
+    transition: all 250ms ease-in-out;
+}
+
+.toolTip.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
